@@ -1,0 +1,37 @@
+html{
+    font-family: sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    /* background-color: #e6e6e6; */
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+.detail-btn{
+    text-decoration: none;
+    padding: 15px 5px;
+    background-color: rgb(7, 225, 0);
+    color: white;
+}
