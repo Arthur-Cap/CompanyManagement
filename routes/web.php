@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Company;
 use App\Http\Controllers\projectController;
 use App\Http\Controllers\TaskController;
+use App\Jobs\testQueue;
+use Illuminate\Support\Facades\Cache;
 
 
 /*
@@ -26,4 +28,12 @@ Route::get('/project/{project}', [TaskController::class,'create']);
 Route::post('/search', [projectController::class,'search']);
 
 
+Route::get('/lock', function (){
+    dispatch(new testQueue);
+    return "Locked";
+});
+
+Route::get('/clean', function (){
+    Cache::forget('lockkPage');
+});
 
